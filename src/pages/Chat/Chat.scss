@@ -8,33 +8,41 @@ $textColorMessage: black;
 $backgroundMessagesBlockWindowChat: #f1cdcd;
 
 body {
-  margin: 0;
-
+  
   .chatWindow {
     display: grid;
-    grid-template-rows: 0.8fr 1fr 15fr;
-    grid-template-columns: 2fr 10fr;
+    height: 100vh;
+    
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 400px 1fr;
     /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
-    grid-template-areas: "a a""b c""d e";
+    grid-template-areas: "b c""d e";
     background-color: $backgroundColorChatWindow;
-
-    .menuChat {
-      display: grid;
-      grid-template-columns: 200px 200px 200px 200px;
-      justify-content: space-evenly;
-      grid-area: a;
-    }
 
     .dialogsBlockHeader {
       display: grid;
       padding-right: 10px;
       padding-left: 5px;
-      grid-template-columns: 5fr 10fr;
-      gap: 10px;
+      grid-template-rows: 60px 25px;
+      gap: 5px;
       align-items: center;
       border: 1px solid $borderColor;
       justify-content: space-evenly;
       background-color: $backgroundHeader;
+
+      .dialogsBlockHeaderSearch {
+        display: grid;
+        grid-template-columns: 4fr 6fr;
+        gap: 15px;
+        align-items: center;
+      }
+
+      .dialogsBlockHeaderSettings {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        align-items: center;
+      }
     }
 
     .dialogsBlockItems {
@@ -48,7 +56,7 @@ body {
 
     .messagesBlockHeader {
       display: grid;
-      grid-template-columns: 200px 200px;
+      grid-template-columns: 400px 200px;
       gap: 10px;
       border: 1px solid $borderColor;
       border-left: none;
@@ -59,12 +67,11 @@ body {
         display: flex;
         gap: 10px;
         margin-left: 10px;
-        text-align: center;
         align-self: center;
       }
 
       .settings {
-        text-align: center;
+        display: flex;
         align-self: center;
       }
     }
@@ -116,8 +123,7 @@ body {
         display: grid;
         grid-template-columns: 10fr 3fr;
         gap: 10px;
-        justify-content: center;
-        align-content: center;
+        align-items: center;
         width: 1000px;
       }
     }

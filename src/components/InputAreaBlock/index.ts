@@ -1,7 +1,7 @@
 import Block from '../../utils/Block';
 import template from './InputAreaBlock.pug';
-import styles from './InputAreaBlock.scss';
 import Input from '../Input';
+import * as styles from './InputAreaBlock.scss'
 
 interface InputAreaBlockProps {
     nameInputText: string;

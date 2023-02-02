@@ -1,7 +1,7 @@
 import Block from '../../utils/Block';
 import template from './DialogItem.pug';
-import styles from './DialogItem.scss';
 import img from '../../../static/img/avatarTest.jpg';
+import * as styles from './DialogItem.scss'
 
 interface DialogItemProps {
     NameDialog: string;

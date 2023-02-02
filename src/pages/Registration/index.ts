@@ -2,11 +2,11 @@ import Block from '../../utils/Block';
 import Link from '../../components/Link';
 import InputAreaBlock from '../../components/InputAreaBlock';
 import template from './Registration.pug';
-import styles from './Registration.scss';
 import validate from '../../utils/forms';
 import AuthController from '../../controllers/AuthController';
 import { SignupData } from '../../api/AuthAPI';
 import ValidationSettings from '../../utils/Validation';
+import * as styles from './Registration.scss'
 
 interface RegistrationPageProps {
     title: string;

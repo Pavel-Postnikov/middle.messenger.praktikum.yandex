@@ -79,7 +79,7 @@ export class ChatAPI {
         this.http = new HTTPTransport('/chats');
     }
 
-    getTokenChat(idChat: string): Promise<GetTockenChatReutrn> {
+    getTokenChat(idChat: number): Promise<string> {
         return this.http.post(`/token/${idChat}`);
     }
 

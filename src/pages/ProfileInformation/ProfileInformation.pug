@@ -1,18 +1,19 @@
 main
-  .profileInformationBlock
-    .profileInformationBlockAvatar
-      img(src=img alt="avatar")
-      form(id='myUserForm') Картинка:
-        br
-        input(id="avatar" type="file" name="avatar" accept="image/*")
-        | !{buttonSendFile}
+  .mainProfile
+    .profileInformationBlock
+      .profileInformationBlockAvatar
+        img(src=img alt="avatar")
+        form(id='myUserForm') Картинка:
+          br
+          input(id="avatar" type="file" name="avatar" accept="image/*")
+          | !{buttonSendFile}
+          
+
+      .profileInformationBlockTitle
+        h1 Ваш профиль
+
+      .inputArea
+        | !{profileInformationItem}
         
-
-    .profileInformationBlockTitle
-      h1 Павел
-
-    .inputArea
-      | !{profileInformationItem}
-      
-    .buttomBlock
-      | !{button}
+      .buttomBlock
+        | !{button}

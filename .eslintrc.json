@@ -9,11 +9,6 @@
             "./tsconfig.json"
         ]
     },
-    "ignorePatterns": [
-        "./dist",
-        "./node_modules",
-        "./parcel-cache"
-    ],
     "rules": {
         "no-console": "off",
         "no-alert": "off",

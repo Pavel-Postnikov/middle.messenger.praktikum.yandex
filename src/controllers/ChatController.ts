@@ -22,7 +22,7 @@ export class UserController {
         }
     }
 
-    async getTokenChat(idChat: string) {
+    async getTokenChat(idChat: number) {
         return this.api.getTokenChat(idChat);
     }
 
@@ -32,7 +32,7 @@ export class UserController {
 
             const data: GetChatsData = {
                 offset: 0,
-                limit: 5,
+                limit: 7,
                 title: ''
             }
             this.getChats(data);

@@ -1,13 +1,14 @@
 import AuthorizationPage from './pages/Authorization';
 import ChangingPasswordPage from './pages/ChangingPassword';
 import ChangingUserInformationPage from './pages/ChangingUserInformation';
-import { ProfilePage } from './pages/ProfileInformation';
+import {ProfilePage} from './pages/ProfileInformation';
 import Error404Page from './pages/Error404';
 import Error500Page from './pages/Error500';
 import ChatPage from './pages/Chat';
 import RegistrationPage from './pages/Registration';
 import Router from './utils/Router';
 import AuthController from './controllers/AuthController';
+import store from './utils/store';
 
 enum Routes {
     Index = '/',
@@ -34,17 +35,18 @@ window.addEventListener('DOMContentLoaded', async () => {
         .use(Routes.Error404, Error404Page)
         .start();
 
-    try {
-        AuthController.fetchUser();
-        Router.start();
-        if (window.location.pathname === '/' || window.location.pathname === '/Authorization' || window.location.pathname === '/sign-up') {
-            Router.go('/settings');
-        }
-    } catch {
-        Router.start();
-        if (!(window.location.pathname === '/' || window.location.pathname === '/Authorization' || window.location.pathname === '/sign-up')) {
-            Router.go('/');
-        }
+    const pathIsAuth = window.location.pathname === '/' || window.location.pathname === '/Authorization' || window.location.pathname === '/sign-up';
 
+    await AuthController.fetchUser();
+    const { user } = store.getState()
+
+    if (pathIsAuth && user) {
+        Router.go('/settings');
     }
+
+    if (!pathIsAuth && !user) {
+        Router.go('/');
+    }
+
+
 })

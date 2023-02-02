@@ -1,0 +1,17 @@
+$backgroundColorButton: rgb(221 146 33);
+$backgroundColorButtonHover: white;
+$textColorButton: #0b5d86;
+
+.linkButtonTest {
+  cursor: pointer;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  width: 100%;
+  color: $textColorButton;
+  font-size: 20px;
+  line-height: 0.75;
+
+  &:hover {
+    color: $backgroundColorButtonHover;
+  }
+}

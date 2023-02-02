@@ -1,41 +1,47 @@
 body {
-  background-color: azure;
+  margin: 0;
+  
+  .mainAuth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+    height: 100vh;
+    width: 1fr;
 
-  .authorizationBlock {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 400px;
-    height: 400px;
-    margin: auto;
-    background-color: #afd8ff;
-    border-radius: 20px;
+    .authorizationBlock {
+      margin: 0;
+      padding-top: 5px;
+      padding-bottom: 30px;
+      padding-right: 10px;
+      padding-left: 10px;
+      background-color: #afd8ff;
+      border-radius: 20px;
 
-    .authorizationBlockTitle h1 {
-      font-weight: bold;
-      font-size: 2.25rem;
-      text-align: center;
+      .authorizationBlockTitle h1 {
+        font-weight: bold;
+        font-size: 2.25rem;
+        text-align: center;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      .inputArea {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 10px 30px;
+      }
+
+      .buttomBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
     }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    .inputArea {
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 10px 30px;
-    }
-
-    .buttomBlock {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-  }
+  }  
 }

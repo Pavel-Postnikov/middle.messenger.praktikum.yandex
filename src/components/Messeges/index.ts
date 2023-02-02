@@ -1,15 +1,21 @@
 import Block from '../../utils/Block';
 import template from './Messages.pug';
-import styles from './Messages.scss';
+import * as styles from './Messages.scss'
 
 interface MessagesProps {
   Message: string;
+  who: boolean;
 }
 
 export default class Messages extends Block<MessagesProps> {
   constructor(props: MessagesProps) {
     super('div', props);
-    this.element!.classList.add('message1');
+    
+    if (this.props.who) {
+      this.element!.classList.add('message1')
+    }
+    else this.element!.classList.add('message2');
+
   }
 
   render() {

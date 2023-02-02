@@ -2,12 +2,12 @@ import Block from '../../utils/Block';
 import Link from '../../components/Link';
 import InputAreaBlock from '../../components/InputAreaBlock';
 import template from './ChangingPassword.pug';
-import styles from './ChangingPassword.scss';
 import img from '../../../static/img/avatar.jpg';
 import validate from '../../utils/forms';
 import UserController from '../../controllers/UserController';
 import { PasswordUp } from '../../api/UserAPI';
 import ValidationSettings from '../../utils/Validation';
+import * as styles from './ChangingPassword.scss'
 
 interface ChangingPasswordPageProps {
     title: string;

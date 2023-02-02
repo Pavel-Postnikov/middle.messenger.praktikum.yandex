@@ -2,10 +2,10 @@ import Block from '../../utils/Block';
 import Link from '../../components/Link';
 import ProfileInformationItem from '../../components/ProfileInformationItem';
 import template from './ProfileInformation.pug';
-import styles from './ProfileInformation.scss';
 import { withStore } from '../../utils/store';
 import AuthController from '../../controllers/AuthController';
 import UserController from '../../controllers/UserController';
+import * as styles from './ProfileInformation.scss'
 
 interface ProfileInformationPageProps {
     title: string;
@@ -21,6 +21,7 @@ export default class ProfileInformationPage extends Block<ProfileInformationPage
     }
 
     render() {
+
         this.children.profileInformationItem = [
             new ProfileInformationItem({
                 textConst: 'Имя',

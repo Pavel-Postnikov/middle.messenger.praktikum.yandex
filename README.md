@@ -1,18 +1,23 @@
-# yandex-education
+# yandex-education Xroniks
 
 Использовал:
-шаблонизатор PUG
-препроцессор SCSS
-typescript
-eslint
-stylelint
+- шаблонизатор PUG
+- препроцессор SCSS
+- typescript
+- eslint
+- stylelint
 
-Прототипы нарисованы, лежат в папке UI
+- Сборка проекта через Webpack
+- Настроен pre-commit через Husky
+- Организована сборка контейнера с помощью Docker(а)
 
-Команды для запуска
-npm run start - запуск (порт 3000)
-npm run build - собрать проект
-npm run server - запустить Express сервер
+- Прототипы нарисованы, лежат в папке UI
+
+Команды для запуска:
+- npm run start - запуск (порт 3000)
+- npm run starprod - запустить production сборку
+- npm run devserver - запустить девсервер от Webpack
+- npm run test - запустить тесты
 
 
-https://xronikschat.netlify.app/ - домен из Netlify
+https://xroniks.herokuapp.com/ - домен на heroku

@@ -1,20 +1,20 @@
 import Block from '../../utils/Block';
 import template from './button.pug';
 import { PropsWithRouter, withRouter } from '../hocs/withRouter';
-import * as styles from './button.scss'
+import * as styles from './LinkSettings.scss'
 
-interface LinkProps extends PropsWithRouter {
-    label?: string;
-    events?: {
+interface LinkSettingsProps extends PropsWithRouter {
+    label: string;
+    events: {
         click: () => void;
     };
-    to?: string;
+    to: string;
 }
 
-class Link extends Block<LinkProps> {
-    constructor(props: LinkProps) {
+class LinkSettings extends Block<LinkSettingsProps> {
+    constructor(props: LinkSettingsProps) {
         super('span', props);
-        this.element?.classList.add('linkButton');
+        this.element?.classList.add('linkButtonTest');
         this.props.events = {
             click: () => this.navigate(),
         }
@@ -29,4 +29,4 @@ class Link extends Block<LinkProps> {
     }
 }
 
-export default withRouter(Link);
+export default withRouter(LinkSettings);

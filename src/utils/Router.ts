@@ -2,9 +2,13 @@
 import Block from './Block';
 import Route from './Route';
 
-interface ComponentConstructable<P extends Record<string, any>> {
+export interface ComponentConstructable<P extends Record<string, any>> {
     new(props: P): Block<P>
 }
+
+export interface BlockConstructable<P extends Object = any> {
+    new(props: P): Block<P>;
+  }
 
 class Router {
     private static __instance: Router;
@@ -61,7 +65,6 @@ class Router {
 
     public go(pathname: string) {
         this.history.pushState({}, '', pathname);
-
 
         this._onRoute(pathname);
     }

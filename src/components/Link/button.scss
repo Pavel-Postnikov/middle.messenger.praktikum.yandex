@@ -13,9 +13,8 @@ $textColorButton: white;
   width: 80%;
   color: $textColorButton;
   font-size: 20px;
-  line-height: 0.5;
+  line-height: 0.75;
   text-align: center;
-  text-decoration: none;
 
   &:hover {
     background-color: $backgroundColorButtonHover;
